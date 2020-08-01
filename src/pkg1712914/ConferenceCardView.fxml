@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="conference_card_anchor_pane" prefHeight="320.0" prefWidth="220.0" style="-fx-border-color: black; -fx-border-width: 0.5px;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="conference_card_title" alignment="CENTER" layoutX="12.5" layoutY="154.0" text="Hội nghị 1" textAlignment="CENTER" AnchorPane.leftAnchor="12.5" AnchorPane.rightAnchor="12.5">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="conference_card_location" layoutX="29.0" layoutY="278.0" text="Hội trường A" />
+      <Label fx:id="conference_card_time" alignment="CENTER" layoutX="12.5" layoutY="183.0" text="14:30 - 06/11/2020" AnchorPane.leftAnchor="12.5" AnchorPane.rightAnchor="12.5" />
+      <ImageView fx:id="conference_card_icon" fitHeight="15.0" fitWidth="15.0" layoutX="172.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../user.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="conference_card_attendees" layoutX="190.0" layoutY="278.0" text="15" />
+      <Label fx:id="conference_card_description" layoutX="46.0" layoutY="210.0" maxWidth="150.0" prefHeight="50.0" prefWidth="150.0" style="-fx-wrap-text: true; -fx-alignment: center;" text="Hội nghị thường niên tổ chức vào tháng 11 hàng năm" textAlignment="CENTER" textFill="#5b5b5b" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="46.0" />
+      <AnchorPane layoutX="1.5" layoutY="1.5" prefHeight="142.0" prefWidth="232.0" style="-fx-border-radius: 20px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="conference_card_image" fitHeight="142.0" fitWidth="229.0" layoutX="-6.0" pickOnBounds="true" style="-fx-border-radius: 20px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../../../../../../sample.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

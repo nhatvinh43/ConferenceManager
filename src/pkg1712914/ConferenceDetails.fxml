@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="14.0" layoutY="93.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="47.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="153.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="111.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="133.0" minHeight="0.0" prefHeight="79.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="199.0" minHeight="7.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="78.0" minHeight="0.0" prefHeight="1.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="back" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@../images/arrow.png" />
+               </image>
+            </ImageView>
+            <Label text="Thông tin hội nghị" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="conference_name" alignment="CENTER" contentDisplay="CENTER" text="Hội nghị WWDC 2020" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 20;" GridPane.columnIndex="1" GridPane.columnSpan="10" GridPane.rowIndex="6" />
+            <ImageView fx:id="conference_avatar" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/sample.jpg" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" GridPane.columnIndex="3" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <children>
+                  <Label fx:id="conference_description_short" text="Hội nghị công nghệ thường niên tổ chức vào tháng 6 hàng năm.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="conference_join" mnemonicParsing="false" text="Tham gia" />
+               </children>
+            </VBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.columnSpan="10" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-fill-width: true; -fx-background-color: white;">
+                     <children>
+                        <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="20.0" orientation="VERTICAL" prefHeight="146.0" vgap="10.0">
+                           <children>
+                              <AnchorPane prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20px;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="55.0" layoutY="25.0" text="Bắt đầu" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Label fx:id="conference_time_start" alignment="CENTER" layoutX="31.0" layoutY="50.0" text="14:30 - 06/11/2020" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20px;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="55.0" layoutY="25.0" text="Kết thúc" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Label fx:id="conference_time_end" alignment="CENTER" layoutX="31.0" layoutY="50.0" text="16:30 - 06/11/2020" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20px;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="55.0" layoutY="25.0" text="Địa điểm" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Label fx:id="conference_location_name" alignment="CENTER" layoutX="31.0" layoutY="50.0" text="Hội trường 1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="100.0" prefWidth="180.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20px;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="55.0" layoutY="25.0" text="Địa chỉ" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                    <Label fx:id="conference_location_address" alignment="CENTER" layoutX="31.0" layoutY="50.0" text="1022, Linh Trung, T.Đức" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+                        <Label text="Thông tin chi tiết">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="conference_description_long" alignment="TOP_CENTER" lineSpacing="8.0" prefWidth="998.0" style="-fx-wrap-text: true;" text="Hội nghị các nhà phát triển toàn cầu WWDC (Apple Worldwide Developers Conference) là một hội nghị được tổ chức hàng năm của Apple Inc. tại San Jose, California. Đây là một sự kiện để giới thiệu các phần mềm mới và công nghệ để phát triển phần mềm. Những người tham gia có thể tham gia vào các phòng thử nghiệm thực hành với các kỹ sư Apple và tham dự buổi chuyên sâu bao gồm nhiều chủ đề khác nhau.WWDC tổ chức vào lần đầu tiên năm 1987 tại Santa Clara. Sau 15 năm tổ chức ở xung quanh vùng San Jose, hội nghị đã chuyển đến San Francisco." textAlignment="JUSTIFY" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <AnchorPane prefHeight="144.0" prefWidth="265.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutY="46.0" text="Giới hạn người tham dự" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="conference_location_capacity" alignment="CENTER" layoutY="72.0" text="5000" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="144.0" prefWidth="265.0">
+                                 <children>
+                                    <Label alignment="CENTER" layoutY="46.0" text="Người tham dự" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="conference_attendees" alignment="CENTER" layoutY="72.0" text="257" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="conference_attendees_table" prefHeight="144.0" prefWidth="436.0">
+                                <columns>
+                                  <TableColumn fx:id="attendees_fullname" prefWidth="212.0" text="Họ và tên" />
+                                  <TableColumn fx:id="attendees_email" minWidth="0.0" prefWidth="223.0" text="Email" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

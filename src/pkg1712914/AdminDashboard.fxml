@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.096" prefHeight="696.0" prefWidth="1064.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="68.0" maxWidth="1.7976931348623157E308" prefHeight="628.0" prefWidth="81.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="104.0" spacing="10.0">
+                           <children>
+                              <ImageView fx:id="back" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/back.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Trở về" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="104.0" spacing="10.0">
+                           <children>
+                              <ImageView fx:id="account_switch" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/users.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Người dùng" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="91.0" prefWidth="104.0" spacing="10.0">
+                           <children>
+                              <ImageView fx:id="conference_switch" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/conference.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Hội nghị" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding></VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+               <children>
+                  <StackPane id="stackpane" fx:id="stackpane" prefHeight="696.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane id="stackpane_account" fx:id="account_pane" prefHeight="694.0" prefWidth="977.0" visible="false">
+                           <children>
+                              <Label contentDisplay="CENTER" text="Quản lý người dùng" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="60.0" />
+                                 </GridPane.margin></Label>
+                              <TableView id="table_account" fx:id="table_account" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn id="account_id" fx:id="account_id" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="account_fullname" prefWidth="75.0" text="Họ Và Tên" />
+                                  <TableColumn id="account_username" fx:id="account_username" prefWidth="125.0" text="Username" />
+                                    <TableColumn id="account_password" fx:id="account_password" prefWidth="99.0" text="Password" />
+                                    <TableColumn id="account_email" fx:id="account_email" minWidth="1.0" prefWidth="1.0" text="Email" />
+                                    <TableColumn id="account_admin" fx:id="account_admin" prefWidth="133.0" text="Tài khoản Admin" />
+                                    <TableColumn id="account_blocked" fx:id="account_blocked" prefWidth="107.0" text="Bị chặn" />
+                                    <TableColumn id="account_block_action" fx:id="account_block_action" prefWidth="75.0" text="Thao tác" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <GridPane.margin>
+                                    <Insets bottom="50.0" left="60.0" right="60.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                              <SplitMenuButton fx:id="account_filter" mnemonicParsing="false" text="Lọc" GridPane.rowIndex="1">
+                                <items>
+                                    <MenuItem fx:id="user_filter_all" mnemonicParsing="false" text="Tất cả" />
+                                  <MenuItem fx:id="user_filter_admin" mnemonicParsing="false" text="Tài khoản Admin" />
+                                  <MenuItem fx:id="user_filter_user" mnemonicParsing="false" text="Tài khoản người dùng" />
+                                    <MenuItem fx:id="user_filter_blocked" mnemonicParsing="false" text="Tài khoản bị chặn" />
+                                </items>
+                                 <GridPane.margin>
+                                    <Insets left="60.0" />
+                                 </GridPane.margin>
+                              </SplitMenuButton>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="246.0" minHeight="0.0" prefHeight="127.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="594.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="631.0" minHeight="10.0" prefHeight="612.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane id="stackpane_account" fx:id="conference_pane" prefHeight="694.0" prefWidth="977.0">
+                           <children>
+                              <Label contentDisplay="CENTER" text="Quản lý hội nghị" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="60.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TableView id="table_account" fx:id="table_conference" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn id="account_id" fx:id="conference_id" prefWidth="75.0" text="ID" />
+                                    <TableColumn fx:id="conference_name" prefWidth="75.0" text="Tên" />
+                                    <TableColumn id="account_username" fx:id="conference_time_start" prefWidth="125.0" text="Thời gian bắt đầu" />
+                                    <TableColumn id="account_password" fx:id="conference_time_end" prefWidth="99.0" text="Thời gian kết thúc" />
+                                    <TableColumn id="account_email" fx:id="conference_description_short" minWidth="1.0" prefWidth="1.0" text="Mô tả ngắn" />
+                                    <TableColumn id="account_admin" fx:id="conference_location" prefWidth="133.0" text="Địa điểm" />
+                                    <TableColumn id="account_blocked" fx:id="conference_attendees" prefWidth="107.0" text="Số người tham dự" />
+                                    <TableColumn id="account_block_action" fx:id="conference_action" prefWidth="75.0" text="Thao tác" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <GridPane.margin>
+                                    <Insets bottom="50.0" left="60.0" right="60.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets left="60.0" />
+                                 </padding>
+                                 <children>
+                                    <Button fx:id="conference_add" mnemonicParsing="false" text="Thêm hội nghị" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="246.0" minHeight="0.0" prefHeight="127.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="594.0" minHeight="0.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="631.0" minHeight="10.0" prefHeight="612.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
